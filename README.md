@@ -102,8 +102,7 @@ After experimenting with the initial dataset:
 * Tried with a perfect balanced set of 500 samples for each sentiment (4k samples total) - after data augmentation
 
 ![alt text](https://i.imgur.com/vu9LkE8.png)
-![alt text](https://i.imgur.com/vZicloM.png)
-![alt text](https://i.imgur.com/BaNFwhL.png)
+![alt text](https://i.imgur.com/vZicloM.png) ![alt text](https://i.imgur.com/BaNFwhL.png)
 
 ### Discussion
 
