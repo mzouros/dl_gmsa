@@ -26,6 +26,7 @@ Instructor: Mr. Theodoros Giannakopoulos - [tygiannak](https://github.com/tyiann
 
 * Approximately 10k Greek songs were collected spanning from the Interwar Period (1920-1940) and Greek Junta / Dictatorship (1967-1974), until today (2021)
 * The songs collected were in various forms (.mp3, .wma, .wav) and their aggregated size exceeds 120 GB
+* Initial Dataset: https://raw.githubusercontent.com/mzouros/dl_gmsa/main/Greek_Songs_List.txt
 
 ### Data Preparation
 
@@ -48,6 +49,8 @@ Instructor: Mr. Theodoros Giannakopoulos - [tygiannak](https://github.com/tyiann
 ### Feature Extraction
 
 * Feature extraction via Spotify's API and export data to .csv
+* Some of the features extracted were Danceability, Energy, Valence, Liveness and Loudness
+* Song Features: https://github.com/mzouros/dl_gmsa/blob/main/Spotify_Tracks.csv 
 
 ### Data Preprocessing
 
@@ -70,6 +73,8 @@ Instructor: Mr. Theodoros Giannakopoulos - [tygiannak](https://github.com/tyiann
   * CENS
 * Features
   * MFCCs
+  * STFTs
+  * ZCRs
 
 ![alt text](https://i.imgur.com/FUpXhn5.png)
 ![alt text](https://i.imgur.com/c73Cfzi.png)
@@ -88,9 +93,17 @@ After experimenting with the initial dataset:
 
 ![alt text](https://i.imgur.com/8K2gsmm.png)
 
-### CNN Implementation
+### CNN Implementation and Results
 
-under construction
+* Lots of different architectures have been tested, resulting on similar results (<0.4 validation accuracy)
+* In all the architectures our model seems to not be able to learn after a while
+* Tried most of overfitting avoidance techniques (kernel regularization, batch normalization, dropout, ES)
+* Tried with different model sizes (layers, nodes), batch sizes, kernel & stride sizes, dropout values, number of epochs
+* Tried with a perfect balanced set of 500 samples for each sentiment (4k samples total) - after data augmentation
+
+![alt text](https://i.imgur.com/vu9LkE8.png)
+![alt text](https://i.imgur.com/vZicloM.png)
+![alt text](https://i.imgur.com/BaNFwhL.png)
 
 ### Discussion
 
@@ -110,6 +123,8 @@ under construction
 Experiment with:
 * Bigger Dataset (10k+ images)
 * Bigger image size (maybe 512x512)
+* Pre-trained Classifiers
+* Classification in 4 sentiments (Happy, Calm, Sad, Angry) instead of 8
 * Different NN architectures (eg CNN-RNN in parallel)
 * Instead of feature extraction through Spotify's API, use an Annotation App, so volunteers individuals can annotate according to their belief (eg AnnoEmo app)
 
