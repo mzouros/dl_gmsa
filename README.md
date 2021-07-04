@@ -101,7 +101,14 @@ After experimenting with the initial dataset:
 * Tried with different model sizes (layers, nodes), batch sizes, kernel & stride sizes, dropout values, number of epochs
 * Tried with a perfect balanced set of 500 samples for each sentiment (4k samples total) - after data augmentation
 
-![alt text](https://i.imgur.com/vu9LkE8.png)![alt text](https://i.imgur.com/vZicloM.png)![alt text](https://i.imgur.com/BaNFwhL.png)
+#### Model
+![alt text](https://i.imgur.com/vu9LkE8.png)
+
+#### 8 Labels
+![alt text](https://i.imgur.com/BaNFwhL.png)![alt text](https://i.imgur.com/vZicloM.png)
+
+#### 4 Labels
+![alt text](https://i.imgur.com/IslcXHL.png)![alt text](https://i.imgur.com/GhAOS8A.png)
 
 ### Discussion
 
